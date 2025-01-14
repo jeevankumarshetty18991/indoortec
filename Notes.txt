@@ -1,0 +1,7 @@
+remove read more from all the pages.
+Interchange trending categories and home interior sections.
+Rename trending categories to Automation Solutions.
+Rename home interior to Interior design & Solutions.
+Integrate from "contact us" with "indoortech@outlook.com" through web3forms. (Validations : Email Id, Phone number) (Add another field : location - city, state)
+Add photo - slider for projects
+Remove play button from home slide photo slides.
