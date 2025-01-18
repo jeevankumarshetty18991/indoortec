@@ -13,6 +13,7 @@
   <meta name="author" content="" />
 
   <title>INDOORTEC</title>
+  <link rel="icon" href="favicon.ico">
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
@@ -130,13 +131,13 @@
                       </span> -->
                     </h1>
                     <p>
-                      Elevate your home, office, and commercial spaces with our tailored interior solutions. Combining modern design and functionality, we create environments that inspire comfort, luxuyx, productivity, and success.
+                      Elevate your home, office, and commercial spaces with our tailored interior solutions. Combining modern design and functionality, we create environments that inspire comfort, luxury, productivity, and success.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn-1">
                         Read More
                       </a>
-                      <a href="contact.html" class="btn-2">
+                      <a href="#contactSection" class="btn-2">
                         Contact us
                       </a>
                     </div>
@@ -166,7 +167,7 @@
                       <a href="" class="btn-1">
                         Read More
                       </a>
-                      <a href="contact.html" class="btn-2">
+                      <a href="#contactSection" class="btn-2">
                         Contact us
                       </a>
                     </div>
@@ -641,7 +642,7 @@
   
   <!-- contact section -->
 
-  <section class="contact_section layout_padding">
+  <section class="contact_section layout_padding" id="contactSection">
     <div class="container ">
       <div class="heading_container">
         <h2 class="">
@@ -653,10 +654,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <form action="https://api.web3forms.com/submit" method="POST">
+          <form action="https://api.web3forms.com/submit" method="POST" id="contact_form">
             <input type="hidden" name="access_key" value="47935cdb-6649-4ee4-9313-44e8432b3ea2">
             <div>
-              <input type="text" placeholder="Name" name="name"/>
+              <input type="text" placeholder="Name" name="name" required/>
             </div>
             <div>
               <input type="email" placeholder="Email" name="email" required/>
@@ -668,7 +669,7 @@
               <input type="text" placeholder="State" name="state"/>
             </div>
             <div>
-              <input type="text" placeholder="City" name="city"/>
+              <input type="text" placeholder="City" name="city" required/>
             </div>
             <div>
               <input type="text" class="message-box" placeholder="Message" name="message" />
@@ -986,6 +987,13 @@
 
     });
 
+    
+window.onload = function() {
+        // Reset the form fields when the page loads
+        document.getElementById("contact_form").reset();
+
+    };
+
 //     $('#projects_slider').owlCarousel({
 //     loop: true,
 //     margin: 10,
@@ -1095,7 +1103,6 @@ document.addEventListener("DOMContentLoaded", function () {
         sliderImage.src = fullImages[currentIndex];
     }
 });
-
   </script>
 
 </body>
