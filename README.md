@@ -1,28 +1,28 @@
 **Steps to deploy on Git:**
 1. Go inside your project folder
-cd path/to/your/website-folder
+_**cd path/to/your/website-folder**_
 
 2. Initialize Git (if not already done)
-git init
+_**git init**_
 
 3. Add your remote GitHub repository
- git remote add origin https://github.com/jeevankumarshetty18991/indoortec
+_** git remote add origin https://github.com/jeevankumarshetty18991/indoortec**_
 
 4. Check if it’s linked correctly:
-git remote -v
+_**git remote -v**_
 
 
 5. Stage all files
-git add .
+_**git add .**_
 
 6. Commit your changes
-git commit -m "Initial commit"
+_**git commit -m "Initial commit"**_
 
 
 7. Push to GitHub
 If your repo is empty (newly created):
-git branch -M main
-git push -u origin main
+_**git branch -M main
+git push -u origin main**_
 
 8. If your repo already has code and you want to overwrite it:
-git push -u origin main --force
+_**git push -u origin main --force**_
