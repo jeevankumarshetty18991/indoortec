@@ -22,7 +22,7 @@ _**git commit -m "Initial commit"**_
 7. Push to GitHub
 If your repo is empty (newly created):
 _**git branch -M main
-git push -u origin main**_
+git push -u origin master**_
 
 8. If your repo already has code and you want to overwrite it:
-_**git push -u origin main --force**_
+_**git push -u origin master --force**_
