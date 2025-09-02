@@ -1,5 +1,5 @@
 const questions = [
-  "May I know your full name, please?",
+  "What's your name?",
   "Thanks! What's your phone number?",
   "What type of property is this? (Apartment, Villa, Office)",
   "How big is the space? (e.g., 2BHK, 1200 sq. ft.)",
@@ -37,7 +37,6 @@ function addMessage(text, sender, isError = false) {
 function askNext() {
   if (current < questions.length) {
     if (current === 4) {
-      // Special case: dropdown for location
       setTimeout(() => {
         addMessage(questions[current], 'bot');
 
@@ -93,20 +92,19 @@ function submitForm() {
   form.submit();
 }
 
-// ✅ Phone number validation here
+// ✅ Phone number validation
 userInput.addEventListener('keydown', e => {
   if (e.key === 'Enter' && userInput.value.trim()) {
     e.preventDefault();
     const text = userInput.value.trim();
 
-    // Show user input first
-    addMessage(text, 'user');
+    addMessage(text, 'user'); // always show input first
 
     if (current === 1) {
       if (!/^\d{10}$/.test(text)) {
-        addMessage("Please enter a valid 10-digit phone number.", "bot", true); // 🔴 Red error message
+        addMessage("Please enter a valid 10-digit phone number.", "bot", true);
         userInput.value = '';
-        return; // stop and don’t move forward
+        return;
       }
     }
 
@@ -117,7 +115,7 @@ userInput.addEventListener('keydown', e => {
   }
 });
 
-// Start the conversation
+// Start conversation
 function startConversation() {
   addMessage("Hello! 👋 Welcome to Indoortec", "bot");
   setTimeout(() => {
@@ -136,7 +134,19 @@ document.addEventListener("DOMContentLoaded", function () {
     return window.innerWidth <= 768;
   }
 
+  let ignoreResize = false;
+
+  
+  userInput.addEventListener("focus", () => {
+    ignoreResize = true;
+  });
+  userInput.addEventListener("blur", () => {
+    setTimeout(() => ignoreResize = false, 500);
+  });
+
   function updateChatbotState() {
+    if (ignoreResize) return; 
+
     if (isMobile()) {
       chatbotWidget.style.display = "none";
       reopenBtn.style.display = "block";
