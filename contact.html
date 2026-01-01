@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>INDOORTEC</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLDQMMJYPH"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QLDQMMJYPH');
+  </script>
+
+  <link rel="icon" href="favicon.ico">
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+
+  
+  <div id="chatbotWidget" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+
+  
+
+<div class="chat-container">
+    <div class="chat-header">Interior Design Assistant 🛋️</div>
+    <span class="chat-close-btn" id="chatCloseBtn">&times;</span>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-footer">
+      
+
+ 
+
+<form id="chatForm" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="1d712904-3d37-4def-bffe-7084b97bc7e1">
+  <input type="hidden" name="redirect" value="https://www.indoortec.com"/>
+  <input type="hidden" name="name" value="Chat Widget">
+  <input type="hidden" name="email" value="no-reply@indoortec.com">
+
+  <input type="text" name="message" id="userInput" placeholder="Type your answer..." autocomplete="off" required />
+  <button type="submit" style="display: none;"></button>
+</form>
+    </div>
+  </div>
+
+</div>
+<!-- Chatbot Reopen Button -->
+<div id="reopenChatbotBtn" class="reopenChatbotBtn">
+  🗨️
+</div>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/Indoortec_logo.png" alt="" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutUs.html"> About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projects.html">Interior</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="solutions.html">Automation </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="custom_menu-btn ">
+              <button>
+                <span class=" s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="container ">
+      <div class="heading_container">
+        <h2 class="">
+          Contact Us
+        </h2>
+      </div>
+
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          
+
+    
+          <form action="https://api.web3forms.com/submit" method="POST" id="contact_form">
+            <input type="hidden" name="access_key" value="47935cdb-6649-4ee4-9313-44e8432b3ea2">
+            <input type="hidden" name="redirect" value="https://www.indoortec.com"/>
+                        <div>
+  <input type="text" placeholder="Name" name="name" id="name" autocomplete="name" />
+  <span class="error-message" id="nameError"></span>
+</div>
+<div>
+  <input type="email" placeholder="Email" name="email" id="email" autocomplete="email" />
+  <span class="error-message" id="emailError"></span>
+</div>
+<div>
+  <input type="tel" placeholder="Phone" name="phone" id="phone" autocomplete="phone" />
+  <span class="error-message" id="phoneError"></span>
+</div>
+<div>
+  <input type="text" placeholder="State" name="state" id="state" autocomplete="address-level1" />
+  <span class="error-message" id="stateError"></span>
+</div>
+<div>
+  <input type="text" placeholder="City" name="city" id="city" autocomplete="address-level2" />
+  <span class="error-message" id="cityError"></span>
+</div>
+<div>
+  <input type="text" class="message-box" placeholder="Message" name="message" id="message" autocomplete="off" />
+</div>
+<div class="terms-container" style="margin: 10px 0; font-size: 14px;">
+  <label>
+    <input type="checkbox" id="termsCheckbox" required>
+    I have read and accept the
+    <a href="privacy_policy.html" target="_blank" id="privacyLink">
+      Privacy Policy
+    </a> and 
+    <a href="terms-and-conditions.html" target="_blank" id="termsLink">
+      Terms and Conditions
+    </a>
+  </label>
+</div>
+
+<div class="d-flex">
+  <button type="submit" id="submitBtn" disabled>
+    SEND
+  </button>
+</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+
+
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="info_logo">
+        <h2>
+          Indoortec Innovations
+        </h2>
+      </div>
+      <div class="row contact_media_section">
+
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+              Contact :
+            </h5>
+            <div>
+              <div class="img-box">
+                <img src="images/location-white.png" width="18px" alt="">
+              </div>
+              <p>
+                Address :
+                Shree Hillside, Kavoor, Mangalore-575015
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/telephone-white.png" width="12px" alt="">
+              </div>
+              <p>
+                +91-7353767557
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/envelope-white.png" width="18px" alt="">
+              </div>
+              <p>
+                indoortec@outlook.com
+              </p>
+            </div>
+          </div>
+
+
+          <div class="social_box">
+            <a href="https://www.facebook.com/profile.php?id=61571949200450" target="_blank">
+              <img src="images/fb.png" alt="">
+            </a>
+            <a href="">
+              <img src="images/linkedin.png" alt="">
+            </a>
+            <a href="https://www.instagram.com/indoor_tec?utm_source=qr&igsh=N2x3YmJmOGVyaTU0" target="_blank">
+              <img src="images/instagram.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <img src="images/Whatsapp_QR.png" class="qr_img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; 2026 All Rights Reserved By
+        <a href="https://html.design/">IndoorTec Innovations.</a>
+      </p>
+    </div>
+  </section>
+  <!-- end  footer section -->
+
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/chatbot.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
+  </script>
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      navText: [],
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        420: {
+          items: 2
+        },
+        1000: {
+          items: 5
+        }
+      }
+
+    });
+  </script>
+  <script>
+    var nav = $("#navbarSupportedContent");
+    var btn = $(".custom_menu-btn");
+    btn.click
+    btn.click(function (e) {
+
+      e.preventDefault();
+      nav.toggleClass("lg_nav-toggle");
+      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    });
+  </script>
+  <script>
+    $('.carousel').on('slid.bs.carousel', function () {
+      $(".indicator-2 li").removeClass("active");
+      indicators = $(".carousel-indicators li.active").data("slide-to");
+      a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+      console.log(indicators);
+
+    })
+
+ document.addEventListener("DOMContentLoaded", function () {
+  const termsCheckbox = document.getElementById("termsCheckbox");
+  const submitBtn = document.getElementById("submitBtn");
+
+  
+  function updateButton() {
+    submitBtn.disabled = !termsCheckbox.checked;
+  }
+
+    // Checkbox click
+  termsCheckbox.addEventListener("change", updateButton);
+
+});
+
+
+      // Contact Form Validation
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact_form");
+  const fields = {
+    name: document.getElementById("name"),
+    email: document.getElementById("email"),
+    phone: document.getElementById("phone"),
+    state: document.getElementById("state"),
+    city: document.getElementById("city")
+  };
+
+  const errors = {
+    name: document.getElementById("nameError"),
+    email: document.getElementById("emailError"),
+    phone: document.getElementById("phoneError"),
+    state: document.getElementById("stateError"),
+    city: document.getElementById("cityError")
+  };
+
+  function validateField(fieldName) {
+    const value = fields[fieldName].value.trim();
+    errors[fieldName].innerText = ""; // Clear old error
+
+    switch (fieldName) {
+      case "name":
+        if (value === "") errors.name.innerText = "Name is required";
+        break;
+      case "email":
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+        if (!emailPattern.test(value)) errors.email.innerText = "Enter a valid email";
+        break;
+      case "phone":
+        const phonePattern = /^\d{10}$/;
+        if (!phonePattern.test(value)) errors.phone.innerText = "Enter a valid 10-digit phone number";
+        break;
+      case "state":
+        if (value === "") errors.state.innerText = "State is required";
+        break;
+      case "city":
+        if (value === "") errors.city.innerText = "City is required";
+        break;
+    }
+  }
+
+  // Live validation (runs when user types or leaves field)
+  Object.keys(fields).forEach(fieldName => {
+    fields[fieldName].addEventListener("input", () => validateField(fieldName));
+    fields[fieldName].addEventListener("blur", () => validateField(fieldName));
+  });
+
+  // Validate all on submit
+  form.addEventListener("submit", function (e) {
+    let valid = true;
+    Object.keys(fields).forEach(fieldName => {
+      validateField(fieldName);
+      if (errors[fieldName].innerText !== "") valid = false;
+    });
+
+    if (!valid) {
+      e.preventDefault();
+    } else {
+      setTimeout(() => form.reset(), 500);
+    }
+  });
+});
+
+
+
+  </script>
+
+</body>
+</body>
+
+</html>
