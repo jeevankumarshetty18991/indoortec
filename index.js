@@ -56,6 +56,54 @@ const portfolioProjects = [
       "https://i.pinimg.com/1200x/a8/17/47/a8174785ec703f277ddbf09ee367c593.jpg"
     ]
   },
+  {
+    id: 5,
+    name: "",
+    category: "Grocery & Supermarket Showroom",
+    location: "",
+    aspectRatioClass: "aspect-square",
+    mainImg: "https://i.pinimg.com/1200x/41/34/6c/41346c623d584409d59a960cd89cda08.jpg",
+    galleryImages: [
+      "https://i.pinimg.com/1200x/41/34/6c/41346c623d584409d59a960cd89cda08.jpg",
+      "https://i.pinimg.com/1200x/00/10/87/001087b2ac303d2f6e5263cf16027bda.jpg"
+    ]
+  },
+  {
+    id: 6,
+    name: "",
+    category: "Jewellery & Fashion Shops",
+    location: "",
+    aspectRatioClass: "aspect-wide",
+    mainImg: "https://i.pinimg.com/1200x/8d/77/6b/8d776b213c3ee830d6bed842092e65b2.jpg",
+    galleryImages: [
+      "https://i.pinimg.com/1200x/8d/77/6b/8d776b213c3ee830d6bed842092e65b2.jpg",
+      "https://i.pinimg.com/736x/39/89/8a/39898a2108b87c1d0ed4d283d2fe66a8.jpg"
+    ]
+  },
+  {
+    id: 7,
+    name: "",
+    category: "Furniture & Home Decor Showroom",
+    location: "",
+    aspectRatioClass: "aspect-square",
+    mainImg: "https://i.pinimg.com/1200x/64/58/20/6458209ac3e49ecf9335c33253bf2042.jpg",
+    galleryImages: [
+      "https://i.pinimg.com/1200x/64/58/20/6458209ac3e49ecf9335c33253bf2042.jpg",
+      "https://i.pinimg.com/1200x/d4/97/27/d497276dc71d3c11f584bf0b62c96da2.jpg"
+    ]
+  },
+    {
+    id: 8,
+    name: "",
+    category: "Beauty Salon",
+    location: "",
+    aspectRatioClass: "aspect-wide",
+    mainImg: "https://i.pinimg.com/736x/13/78/02/1378026208b197af2320f24c2a9a08b7.jpg",
+    galleryImages: [
+      "https://i.pinimg.com/736x/13/78/02/1378026208b197af2320f24c2a9a08b7.jpg"
+    ]
+  },
+  
 ];
 
 // Testimonials Data
@@ -291,6 +339,7 @@ document.querySelectorAll(".open-consultation").forEach(btn => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     // Close mobile menu if open
+    resetConsultationForm();
     mobileDrawer.classList.remove("open");
 
     consultationModal.classList.add("open");
@@ -299,9 +348,25 @@ document.querySelectorAll(".open-consultation").forEach(btn => {
 });
 
 document.getElementById("close-consultation-btn").addEventListener("click", () => {
+  resetConsultationForm();
   consultationModal.classList.remove("open");
   document.body.style.overflow = "";
 });
+
+// Reset the form Fields
+function resetConsultationForm() {
+    consultationForm.reset();
+
+    // Clear error text
+    phoneError.textContent = "";
+    emailError.textContent = "";
+
+    // Clear validation classes
+    consultationForm.querySelectorAll("input, textarea, select").forEach(field => {
+        field.classList.remove("input-error", "input-success");
+        field.setCustomValidity("");
+    });
+}
 
 // Mobile Drawer Menu Controls
 const openMenuBtn = document.getElementById("open-menu-btn");
@@ -325,6 +390,7 @@ document.querySelectorAll(".drawer-link").forEach(link => {
 // Click outside modal to close
 window.addEventListener("click", (e) => {
   if (e.target === consultationModal) {
+    resetConsultationForm();
     consultationModal.classList.remove("open");
     document.body.style.overflow = "";
   }
@@ -341,6 +407,7 @@ window.addEventListener("click", (e) => {
 // Keyboard Accessibility: Close Modals on ESC key
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
+    resetConsultationForm();
     consultationModal.classList.remove("open");
     videoModal.classList.remove("open");
     galleryModal.classList.remove("open");
@@ -422,3 +489,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Initialise Application
 renderPortfolio();
+
+// Phone number Validation
+const phoneInput = document.getElementById("whatsapp-number");
+const phoneError = document.getElementById("phone-error");
+
+phoneInput.addEventListener("input", function () {
+
+    this.value = this.value.replace(/\D/g, "");
+
+    if (this.value.length > 10) {
+        this.value = this.value.substring(0, 10);
+    }
+
+    if (this.value.length === 0) {
+        phoneError.textContent = "";
+        this.classList.remove("input-error","input-success");
+    }
+    else if (this.value.length < 10) {
+        phoneError.textContent = "Mobile number must contain 10 digits.";
+        this.classList.add("input-error");
+        this.classList.remove("input-success");
+    }
+    else {
+        phoneError.textContent = "";
+        this.classList.remove("input-error");
+        this.classList.add("input-success");
+    }
+});
+
+// Email Validation
+const emailInput = document.getElementById("email-address");
+const emailError = document.getElementById("email-error");
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+emailInput.addEventListener("input", function () {
+
+    if (this.value === "") {
+        emailError.textContent = "";
+        this.classList.remove("input-error","input-success");
+    }
+    else if (!emailRegex.test(this.value)) {
+        emailError.textContent = "Please enter a valid email address.";
+        this.classList.add("input-error");
+        this.classList.remove("input-success");
+    }
+    else {
+        emailError.textContent = "";
+        this.classList.remove("input-error");
+        this.classList.add("input-success");
+    }
+});

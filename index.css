@@ -740,17 +740,10 @@ text-shadow: 0 3px 12px rgba(0,0,0,0.35);
 
 
 /*==========================================================
-PREMIUM COMMERCIAL CTA
+PREMIUM COMMERCIAL CTA Vision Tile Section
 ==========================================================*/
 
 .interstitial-section{
-/* 
-max-width:1550px;
-
-margin:90px auto;
-
-padding:0 20px; */
-
   max-width:1550px;
     margin:50px auto;
     padding:0 20px;
@@ -764,8 +757,6 @@ padding:0 20px; */
     background:#081C3B;
     border-radius:28px;
     overflow:hidden;
-    /* min-height:620px; */
-
     min-height: 420px;
 
 }
@@ -798,10 +789,6 @@ margin-bottom:28px;
 
 .banner-icon{
 
-/* width:90px; */
-
-/* height:90px; */
-
 border:2px solid #aadbff;
 
 border-radius:50%;
@@ -812,11 +799,7 @@ align-items:center;
 
 justify-content:center;
 
-/* font-size:38px; */
-
 color:#aadbff;
-
-/* margin-bottom:35px; */
 
  width:70px;
     height:70px;
@@ -826,18 +809,8 @@ color:#aadbff;
 }
 
 .banner-content h2{
-
-/* font-size:72px; */
-
-/* line-height:1.05; */
-
 color:#fff;
-
-/* margin-bottom:30px; */
-
 font-weight:800;
-
-
  font-size:52px;      /* was 72px */
     line-height:1.1;
     margin-bottom:20px;
@@ -853,15 +826,7 @@ color:var(--primary);
 
 .banner-content p{
 
-/* font-size:24px; */
-
-/* line-height:1.7; */
-
 color:#d8dbe5;
-
-/* max-width:560px; */
-
-/* margin-bottom:40px; */
 
   font-size:16px;
     line-height:1.6;
@@ -911,13 +876,9 @@ transform:translateY(-3px);
 }
 .banner-features{
 
-/* margin-top:70px; */
-
 display:grid;
 
 grid-template-columns:repeat(4,1fr);
-
-/* gap:30px; */
 
   margin-top:35px;
     gap:20px;
@@ -940,8 +901,6 @@ color:white;
 }
 
 .banner-features i{
-
-/* font-size:30px; */
   font-size:24px;
 color: #aadbff;
 
@@ -2236,11 +2195,21 @@ font-size:18px;
 /*# sourceMappingURL=style.css.map */
 
 
-.error-message {
-  color: red;
-  font-size: 0.9em;
-  margin-top: 4px;
-  display: block;
+
+.error-message{
+    color:#e53935;
+    font-size:13px;
+    margin-top:4px;
+    display:block;
+    min-height:18px;
+}
+
+.input-error{
+    border:1px solid #e53935 !important;
+}
+
+.input-success{
+    border:1px solid #22c55e !important;
 }
 
 .chat-close-btn {
@@ -2332,6 +2301,26 @@ font-size:18px;
     overflow-y: auto;
     /* allow scroll */
   }
+
+  .logo-link{
+    justify-content: center;
+  }
+/* Tile Vision Section */
+.interstitial-section {
+  margin: unset;
+}
+.banner-label{
+  font-size: 12px;
+}
+.banner-content h2{
+  font-size: 30px;
+}
+.banner-content p{
+  font-size: 16px;
+}
+.content-section{
+  padding-bottom: unset;
+}
 }
 
 

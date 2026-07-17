@@ -7,7 +7,7 @@
   <title>Indoortec — Commercial Interiors Built for Growth</title>
   <meta name="description"
     content="Indoortec designs premium office, co-working, restaurant, and café interiors for businesses in Mangalore and Bangalore. Book a free consultation today." />
-  <meta name="p:domain_verify" content="1e514d8fb4f1d7e9dec5c26dbf23e822" />
+  <meta name="p:domain_verify" content="1e514d8fb4f1d7e9dec5c26dbf23e822"/>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -543,11 +543,13 @@
           <div class="form-group">
             <label for="whatsapp-number">WhatsApp Number *</label>
             <input type="tel" id="whatsapp-number" name="WhatsApp Number" required placeholder="10-digit mobile number"
-              pattern="[0-9]{10}" />
+              pattern="[0-9]{10}" maxlength="10" />
+               <small class="error-message" id="phone-error"></small>
           </div>
           <div class="form-group">
             <label for="email-address">Email Address *</label>
             <input type="email" id="email-address" name="Email Address" required placeholder="name@company.com" />
+            <small class="error-message" id="email-error"></small>
           </div>
         </div>
         <div class="form-row">
